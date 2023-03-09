@@ -1,9 +1,7 @@
 package br.com.etec.gabriel.cursoapipw.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -11,20 +9,42 @@ import java.util.Objects;
 public class Aluno {
 
     @Id
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String nomealuno;
 
+@ManyToOne
+@JoinColumn(name="idcurso")
+   private Curso curso;
 
-    private Integer idcurso;
-    private Integer idcidade;
+@ManyToOne
+@JoinColumn(name="idcidade")
+private Cidade cidade;
 
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
+    }
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
+
+    public Cidade getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
     }
 
     public String getNomealuno() {
@@ -35,21 +55,9 @@ public class Aluno {
         this.nomealuno = nomealuno;
     }
 
-    public Integer getIdcurso() {
-        return idcurso;
-    }
 
-    public void setIdcurso(Integer idcurso) {
-        this.idcurso = idcurso;
-    }
 
-    public Integer getIdcidade() {
-        return idcidade;
-    }
 
-    public void setIdcidade(Integer idcidade) {
-        this.idcidade = idcidade;
-    }
 
 
     @Override

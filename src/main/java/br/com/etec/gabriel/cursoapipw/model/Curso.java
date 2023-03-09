@@ -2,6 +2,8 @@ package br.com.etec.gabriel.cursoapipw.model;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -15,6 +17,10 @@ public class Curso {
 private Integer id;
 
 private String nomecurso;
+
+@OneToMany(mappedBy = "curso")
+private List<Aluno> alunocurso = new ArrayList<>();
+
 
     public String getNomecurso() {
         return nomecurso;
@@ -30,6 +36,14 @@ private String nomecurso;
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public List<Aluno> getAlunocurso() {
+        return alunocurso;
+    }
+
+    public void setAlunocurso(List<Aluno> alunocurso) {
+        this.alunocurso = alunocurso;
     }
 
     @Override
