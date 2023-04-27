@@ -1,6 +1,8 @@
 package br.com.etec.gabriel.cursoapipw.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +19,8 @@ public class Cidade {
 
     private String uf;
 
-    private String nomeCidade;
-
+    private String nomecidade;
+@JsonIgnore
     @OneToMany(mappedBy = "cidade")
 private List<Aluno> alunocidade= new ArrayList<>();
 
@@ -32,11 +34,11 @@ private List<Aluno> alunocidade= new ArrayList<>();
     }
 
     public String getNomeCidade() {
-        return nomeCidade;
+        return nomecidade;
     }
 
     public void setNomeCidade(String nomeCidade) {
-        this.nomeCidade = nomeCidade;
+        this.nomecidade = nomeCidade;
     }
 
     public String getUf() {
