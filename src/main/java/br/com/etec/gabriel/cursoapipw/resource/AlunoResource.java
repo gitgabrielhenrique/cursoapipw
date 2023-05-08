@@ -15,6 +15,7 @@ public class AlunoResource {
     @Autowired
    private AlunoRepository alunoRepository;
 
+
     @GetMapping("/todos")
     public List<Aluno> LIstarTodosAlunos(){
         return alunoRepository.findAll();
