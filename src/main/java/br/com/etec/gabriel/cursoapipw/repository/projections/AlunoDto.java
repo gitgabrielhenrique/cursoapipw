@@ -3,25 +3,24 @@ package br.com.etec.gabriel.cursoapipw.repository.projections;
 public class AlunoDto {
   private Long idalunos;
   private String nomealuno;
-  private String uf;
-  private String nomecidade;
   private String nomecurso;
+  private String nomecidade;
+  private String uf;
 
-public AlunoDto(Long idalunos, String nomealuno, String uf, String nomecurso, String nomecidade){
-this.idalunos=idalunos;
-this.nomealuno=nomealuno;
-this.nomecidade=nomecidade;
-this.uf=uf;
-this.nomecurso=nomecurso;
+  public AlunoDto(Long idalunos, String nomealuno, String nomecurso, String nomecidade, String uf) {
+    this.idalunos = idalunos;
+    this.nomealuno = nomealuno;
+    this.nomecurso = nomecurso;
+    this.nomecidade = nomecidade;
+    this.uf = uf;
+  }
 
-}
-
-  public Long getId() {
+  public Long getIdalunos() {
     return idalunos;
   }
 
-  public void setId(Long id) {
-    this.idalunos = id;
+  public void setIdalunos(Long idalunos) {
+    this.idalunos = idalunos;
   }
 
   public String getNomealuno() {
@@ -32,12 +31,12 @@ this.nomecurso=nomecurso;
     this.nomealuno = nomealuno;
   }
 
-  public String getUf() {
-    return uf;
+  public String getNomecurso() {
+    return nomecurso;
   }
 
-  public void setUf(String uf) {
-    this.uf = uf;
+  public void setNomecurso(String nomecurso) {
+    this.nomecurso = nomecurso;
   }
 
   public String getNomecidade() {
@@ -48,11 +47,11 @@ this.nomecurso=nomecurso;
     this.nomecidade = nomecidade;
   }
 
-  public String getNomecurso() {
-    return nomecurso;
+  public String getUf() {
+    return uf;
   }
 
-  public void setNomecurso(String nomecurso) {
-    this.nomecurso = nomecurso;
+  public void setUf(String uf) {
+    this.uf = uf;
   }
 }

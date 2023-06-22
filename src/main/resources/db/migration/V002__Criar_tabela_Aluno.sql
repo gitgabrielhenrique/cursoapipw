@@ -4,7 +4,6 @@ nomealuno VARCHAR(300),
 idcurso int not null,
 idcidade int not null
 
-
 );
 
 

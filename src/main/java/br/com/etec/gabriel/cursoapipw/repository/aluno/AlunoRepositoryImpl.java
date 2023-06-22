@@ -33,17 +33,11 @@ public class AlunoRepositoryImpl implements  AlunoRepositoryQuery {
 
     criteria.select(builder.construct(AlunoDto.class,
       root.get("idalunos")
-      ,
-      root.get("nomealuno")
-      ,
-      root.get("cidade").get("nomecidade")
-      ,
-      root.get("cidade").get("uf")
-      ,
-      root.get("curso").get("nomecurso")
-
-
-      ));
+      ,root.get("nomealuno")
+      ,root.get("curso").get("nomecurso")
+      ,root.get("cidade").get("nomecidade")
+      ,root.get("cidade").get("uf")
+ ));
 
     Predicate[] predicates = criarRestricoes(builder, alunoFilter, root);
     criteria.where(predicates);
