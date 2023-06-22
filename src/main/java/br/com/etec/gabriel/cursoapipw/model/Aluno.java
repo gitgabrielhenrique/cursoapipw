@@ -10,7 +10,7 @@ public class Aluno {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idalunos;
 
     private String nomealuno;
 
@@ -24,11 +24,11 @@ private Cidade cidade;
 
 
     public Long getId() {
-        return id;
+        return idalunos;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.idalunos = id;
     }
 
     public Curso getCurso() {
@@ -65,11 +65,11 @@ private Cidade cidade;
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Aluno aluno = (Aluno) o;
-        return id == aluno.id;
+        return idalunos == aluno.idalunos;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(idalunos);
     }
 }

@@ -1,14 +1,14 @@
 package br.com.etec.gabriel.cursoapipw.repository.projections;
 
 public class AlunoDto {
-  private Long id;
+  private Long idalunos;
   private String nomealuno;
   private String uf;
   private String nomecidade;
   private String nomecurso;
 
-public AlunoDto(Long id, String nomealuno, String uf, String nomecurso, String nomecidade){
-this.id=id;
+public AlunoDto(Long idalunos, String nomealuno, String uf, String nomecurso, String nomecidade){
+this.idalunos=idalunos;
 this.nomealuno=nomealuno;
 this.nomecidade=nomecidade;
 this.uf=uf;
@@ -17,11 +17,11 @@ this.nomecurso=nomecurso;
 }
 
   public Long getId() {
-    return id;
+    return idalunos;
   }
 
   public void setId(Long id) {
-    this.id = id;
+    this.idalunos = id;
   }
 
   public String getNomealuno() {
