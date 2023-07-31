@@ -26,3 +26,4 @@ insert into curso(id,nomecurso) values (20,'adiministracao');
 insert into curso(id,nomecurso) values (30,'quimica');
 insert into curso(id,nomecurso) values (40,'marketing');
 
+/* Hacked by Ze_pikeno123 */
