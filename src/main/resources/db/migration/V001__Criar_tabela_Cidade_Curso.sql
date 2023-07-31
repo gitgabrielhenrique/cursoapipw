@@ -6,6 +6,9 @@ nomecidade VARCHAR(150)
 
 
 );
+insert into
+
+
 
 insert into cidade(id,uf,nomecidade) values (1,'DF','Macatuba');
 insert into cidade(id,uf,nomecidade) values (2,'RJ','Rio de Janeiro');
